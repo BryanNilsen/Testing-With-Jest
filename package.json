@@ -1,0 +1,21 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "Testing with Jest",
+  "main": "index.js",  
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose --watchAll"
+  },
+  "author": "Bryan Nilsen",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "babel-jest": "^26.5.2",
+    "jest": "^26.5.3",
+    "puppeteer": "^5.3.1"
+  }
+}
