@@ -98,7 +98,7 @@ describe("Function calculates sum of parameters", () => {
 
 Test-Driven Development explanation or link here
 
-1. In `calculations.js`, paste the following code which tests a function called `subtract`.
+1. In `calculations.js`, paste the following code which tests a function called `subtract` which returns the difference of two parameters.
 
 _(The code we're testing doesn't actually exist yet... so the test will automatically fail.)_
 
@@ -125,12 +125,11 @@ import { add, subtract } from "../src/scripts/calculations.js";
 3. Run the test suite - watch the new test fail
    ![subtract fail](./images/add-pass-subtract-fail.png)
 
-   Notice how Jest will tell you exactly where your test has failed. In this case, the test has failed and gives a TypeError: (0 , \_calculations.subtract) is not a function.
-   This basically means either subtract doesn't exist or it does and it is not a function
+   Notice how Jest will tell you exactly where your test has failed. In this case, the test has failed and gives a `TypeError: (0 , \_calculations.subtract) is not a function`
 
-   More info here: [TypeError: "x" is not a function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)
+   This basically means either subtract doesn't exist or it does and it is not a function. More info here: [TypeError: "x" is not a function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)
 
-4. Write code to pass test - Subtraction
+4. Now we need to write some code that will pass the test. If you look at the test we wrote, we are expecting to test a function named `subtract` which returns the difference of the two parameters. Paste the following code into `calculations.js`
 
 ```
 export const subtract = (num1, num2) => {
@@ -139,9 +138,12 @@ export const subtract = (num1, num2) => {
 ```
 
 5. Check your terminal to see how you did.
+
    ![subtract fail](./images/add-subtract-pass.png)
 
 Ideas for things to test:
-if items exist in an array
-keys/values on an object
-string representations
+
+- write some more calculation functions; e.g. multiply, divide, etc.
+- if items exist in an array
+- keys/values on an object
+- string representations
