@@ -1,8 +1,34 @@
-# Basic Javascript Testing using Jest
+# Javascript Unit Testing with Jest
 
-Intro paragraph... why are we doing this??
+## What is Unit Testing?
 
-## Initial Setup
+as per [Wikipedia](https://en.wikipedia.org/wiki/Unit_testing):
+
+> Unit tests are typically automated tests written and run by software developers to ensure that a section of an application (known as the "unit") meets its design and behaves as intended.
+
+> In procedural programming, a unit could be an entire module, but it is more commonly an individual function or procedure. In object-oriented programming, a unit is often an entire interface, such as a class, but could be an individual method.
+
+> By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications.
+
+## What is Jest?
+
+In their own words:
+
+> "Jest is a delightful JavaScript Testing Framework with a focus on simplicity."
+
+Want more info? Go to the [Jest docs](https://jestjs.io/en/)
+
+## Why
+
+TWO WAYS TO USE THIS REPO:
+
+- clone it, run npm install, run the tests - inspect the code and add more code to test
+
+- DIY setup - full walkthrough of npm init and Jest install, customizing environment
+
+### FAST TRACK - NO SETUP - CLONE THIS REPO - run npm install and go!
+
+## DIY - Initial Setup
 
 1. In your workspace directory, create a new project directory: `mkdir Testing-Exercises`
 2. Navigate to your new project directory: `cd Testing-Exercises`
@@ -144,6 +170,6 @@ export const subtract = (num1, num2) => {
 Ideas for things to test:
 
 - write some more calculation functions; e.g. multiply, divide, etc.
-- if items exist in an array
+- filtering arrays
 - keys/values on an object
-- string representations
+- convert an object into an HTML string representation
