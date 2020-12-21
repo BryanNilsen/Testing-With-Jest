@@ -1,8 +1,34 @@
-# Basic Javascript Testing using Jest
+# Javascript Unit Testing with Jest
 
-Intro paragraph... why are we doing this??
+## What is Unit Testing?
 
-## Initial Setup
+as per [Wikipedia](https://en.wikipedia.org/wiki/Unit_testing):
+
+> Unit tests are typically automated tests written and run by software developers to ensure that a section of an application (known as the "unit") meets its design and behaves as intended.
+
+> In procedural programming, a unit could be an entire module, but it is more commonly an individual function or procedure. In object-oriented programming, a unit is often an entire interface, such as a class, but could be an individual method.
+
+> By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications.
+
+## What is Jest?
+
+In their own words:
+
+> "Jest is a delightful JavaScript Testing Framework with a focus on simplicity."
+
+Want more info? Go to the [Jest docs](https://jestjs.io/en/)
+
+## Why
+
+TWO WAYS TO USE THIS REPO:
+
+- clone it, run npm install, run the tests - inspect the code and add more code to test
+
+- DIY setup - full walkthrough of npm init and Jest install, customizing environment
+
+### FAST TRACK - NO SETUP - CLONE THIS REPO - run npm install and go!
+
+## DIY - Initial Setup
 
 1. In your workspace directory, create a new project directory: `mkdir Testing-Exercises`
 2. Navigate to your new project directory: `cd Testing-Exercises`
@@ -98,7 +124,7 @@ describe("Function calculates sum of parameters", () => {
 
 Test-Driven Development explanation or link here
 
-1. In `calculations.js`, paste the following code which tests a function called `subtract`.
+1. In `calculations.js`, paste the following code which tests a function called `subtract` which returns the difference of two parameters.
 
 _(The code we're testing doesn't actually exist yet... so the test will automatically fail.)_
 
@@ -125,12 +151,11 @@ import { add, subtract } from "../src/scripts/calculations.js";
 3. Run the test suite - watch the new test fail
    ![subtract fail](./images/add-pass-subtract-fail.png)
 
-   Notice how Jest will tell you exactly where your test has failed. In this case, the test has failed and gives a TypeError: (0 , \_calculations.subtract) is not a function.
-   This basically means either subtract doesn't exist or it does and it is not a function
+   Notice how Jest will tell you exactly where your test has failed. In this case, the test has failed and gives a `TypeError: (0 , \_calculations.subtract) is not a function`
 
-   More info here: [TypeError: "x" is not a function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)
+   This basically means either subtract doesn't exist or it does and it is not a function. More info here: [TypeError: "x" is not a function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)
 
-4. Write code to pass test - Subtraction
+4. Now we need to write some code that will pass the test. If you look at the test we wrote, we are expecting to test a function named `subtract` which returns the difference of the two parameters. Paste the following code into `calculations.js`
 
 ```
 export const subtract = (num1, num2) => {
@@ -139,9 +164,12 @@ export const subtract = (num1, num2) => {
 ```
 
 5. Check your terminal to see how you did.
+
    ![subtract fail](./images/add-subtract-pass.png)
 
 Ideas for things to test:
-if items exist in an array
-keys/values on an object
-string representations
+
+- write some more calculation functions; e.g. multiply, divide, etc.
+- filtering arrays
+- keys/values on an object
+- convert an object into an HTML string representation
